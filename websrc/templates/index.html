@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Text to Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech Converter</h1>
+        <div class="input-area">
+            <textarea id="textInput" placeholder="Enter text to convert to speech..."></textarea>
+        </div>
+        <div class="controls">
+            <div class="speed-control">
+                <label for="speedRange">Speed:</label>
+                <input type="range" id="speedRange" min="0.5" max="2.0" step="0.1" value="1.0">
+                <span id="speedValue">1.0x</span>
+            </div>
+            <button id="speakButton">Speak</button>
+        </div>
+        <div id="status" class="status">Ready</div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
